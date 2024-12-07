@@ -53,14 +53,39 @@ def main():
         }
     ]
 
-    # Display team members
+    # # Display team members
+    # cols = st.columns(len(team_members))
+    # for col, member in zip(cols, team_members):
+    #     with col:
+    #         encoded_image = encode_image(member['image'])
+    #         st.image(f"data:image/jpeg;base64,{encoded_image}", width=150, caption=member['name'])
+    #         st.write(f"[![GitHub](https://img.shields.io/badge/GitHub-000?style=flat-square&logo=github&logoColor=white)]({member['github']})")
+    #         st.write(f"[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)]({member['linkedin']})")
+
     cols = st.columns(len(team_members))
     for col, member in zip(cols, team_members):
-        with col:
+         with col:
+            # Encode image to base64
             encoded_image = encode_image(member['image'])
-            st.image(f"data:image/jpeg;base64,{encoded_image}", width=150, caption=member['name'])
-            st.write(f"[![GitHub](https://img.shields.io/badge/GitHub-000?style=flat-square&logo=github&logoColor=white)]({member['github']})")
-            st.write(f"[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)]({member['linkedin']})")
+        
+            # HTML structure with background color and adjusted image height
+            st.markdown(f"""
+            <div style='background-color: #f8f9fa; border-radius: 10px; padding: 20px; margin-bottom: 20px; text-align: center;'>
+                <div style='background-color: #ffffff; border-radius: 50%; width: 200px; height: 200px; margin: 0 auto; display: flex; justify-content: center; align-items: center;'>
+                    <img src="data:image/jpeg;base64,{encoded_image}" alt="{member['name']}" style='width: 100%; height: 100%; object-fit: cover; border-radius: 50%;'>
+                </div>
+                <div style='font-size: 22px; font-weight: 600; color: #5F6366; margin-top: 10px;'>{member['name']}</div>
+                <div style='font-size: 18px; color: #5F6366; margin-top: 5px;'>
+                    <a href='https://github.com/{member["github"]}' target='_blank' style='font-size: 20px; color: #000000; margin-right: 10px;'>
+                        <i class="fab fa-github" style="font-size: 20px; color: #000000; margin-right: 5px;"></i> GitHub
+                    </a>
+                    <a href='https://linkedin.com/in/{member["linkedin"]}' target='_blank' style='font-size: 20px; color: #0077B5;'>
+                        <i class="fab fa-linkedin" style="font-size: 20px; color: #0077B5; margin-right: 5px;"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+
 
     # Footer
     st.markdown("---")
