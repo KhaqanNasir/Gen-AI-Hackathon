@@ -35,32 +35,23 @@ def main():
     team_members = [
         {
             "name": "Muhammad Khaqan Nasir",
-            "github": "https://github.com/KhaqanNasir",
-            "linkedin": "https://linkedin.com/in/khaqan-nasir",
+            "github": "=KhaqanNasir",
+            "linkedin": "khaqan-nasir",
             "image": os.path.join(os.path.dirname(__file__), 'assets', 'member01.jpg')
         },
         {
             "name": "Muhammad Adnan Tariq",
-            "github": "https://github.com/adnaan-tariq",
-            "linkedin": "https://www.linkedin.com/in/adnaantariq/",
+            "github": "adnaan-tariq",
+            "linkedin": "adnaantariq",
             "image": os.path.join(os.path.dirname(__file__), 'assets', 'member02.JPG')
         },
         {
             "name": "Muhammad Ibtisiam Afzal",
-            "github": "https://github.com/ibtisamafzal",
-            "linkedin": "https://www.linkedin.com/in/ibtisamafzal/",
+            "github": "ibtisamafzal",
+            "linkedin": "ibtisamafzal",
             "image": os.path.join(os.path.dirname(__file__), 'assets', 'member03.JPG')
         }
     ]
-
-    # # Display team members
-    # cols = st.columns(len(team_members))
-    # for col, member in zip(cols, team_members):
-    #     with col:
-    #         encoded_image = encode_image(member['image'])
-    #         st.image(f"data:image/jpeg;base64,{encoded_image}", width=150, caption=member['name'])
-    #         st.write(f"[![GitHub](https://img.shields.io/badge/GitHub-000?style=flat-square&logo=github&logoColor=white)]({member['github']})")
-    #         st.write(f"[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)]({member['linkedin']})")
 
     cols = st.columns(len(team_members))
     for col, member in zip(cols, team_members):
@@ -76,11 +67,11 @@ def main():
                 </div>
                 <div style='font-size: 22px; font-weight: 600; color: #5F6366; margin-top: 10px;'>{member['name']}</div>
                 <div style='font-size: 18px; color: #5F6366; margin-top: 5px;'>
-                    <a href='https://github.com/{member["github"]}' target='_blank' style='font-size: 20px; color: #000000; margin-right: 10px;'>
-                        <i class="fab fa-github" style="font-size: 20px; color: #000000; margin-right: 5px;"></i> GitHub
+                    <a href='https://github.com/{member["github"]}' target='_blank'>
+                        [![GitHub](https://img.shields.io/badge/GitHub-000?style=flat-square&logo=github&logoColor=white)]
                     </a>
-                    <a href='https://linkedin.com/in/{member["linkedin"]}' target='_blank' style='font-size: 20px; color: #0077B5;'>
-                        <i class="fab fa-linkedin" style="font-size: 20px; color: #0077B5; margin-right: 5px;"></i> LinkedIn
+                    <a href='https://linkedin.com/in/{member["linkedin"]}' target='_blank'>
+                        [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)]
                     </a>
                 </div>
             </div>
@@ -89,8 +80,12 @@ def main():
 
     # Footer
     st.markdown("---")
-    st.write("💻 Developed with ❤️ using Streamlit | © 2024")
-
+    st.markdown("""
+        <div style="text-align: center; font-weight: 600; font-size: 16px;">
+            💻 Developed with ❤️ using Streamlit | © 2024
+        </div>
+    """, unsafe_allow_html=True)
+    
 # Run the application
 if __name__ == "__main__":
     st.set_page_config(
