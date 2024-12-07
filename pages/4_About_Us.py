@@ -43,7 +43,7 @@ def main():
             "name": "Muhammad Adnan Tariq",
             "github": "https://github.com/adnaan-tariq",
             "linkedin": "https://www.linkedin.com/in/adnaantariq/",
-            "image": os.path.join(os.path.dirname(__file__), 'assets', 'member01.jpg')
+            "image": os.path.join(os.path.dirname(__file__), 'assets', 'member02.jpg')
         },
         {
             "name": "Muhammad Ibtisiam Afzal",
