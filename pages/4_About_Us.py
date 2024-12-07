@@ -37,7 +37,7 @@ def main():
             "name": "Muhammad Khaqan Nasir",
             "github": "https://github.com/KhaqanNasir",
             "linkedin": "https://linkedin.com/in/khaqan-nasir",
-            "image": os.path.join(os.path.dirname(__file__), 'assets', 'member01.jpgg')
+            "image": os.path.join(os.path.dirname(__file__), 'assets', 'member01.jpg')
         },
         {
             "name": "Muhammad Adnan Tariq",
@@ -49,7 +49,7 @@ def main():
             "name": "Muhammad Ibtisiam Afzal",
             "github": "https://github.com/ibtisamafzal",
             "linkedin": "https://www.linkedin.com/in/ibtisamafzal/",
-            "image": os.path.join(os.path.dirname(__file__), 'assets', 'member01.jpg')
+            "image": os.path.join(os.path.dirname(__file__), 'assets', 'member03.jpg')
         }
     ]
 
