@@ -43,13 +43,13 @@ def main():
             "name": "Muhammad Adnan Tariq",
             "github": "https://github.com/adnaan-tariq",
             "linkedin": "https://www.linkedin.com/in/adnaantariq/",
-            "image": os.path.join(os.path.dirname(__file__), 'assets', 'member02.jpg')
+            "image": os.path.join(os.path.dirname(__file__), 'assets', 'member02.JPG')
         },
         {
             "name": "Muhammad Ibtisiam Afzal",
             "github": "https://github.com/ibtisamafzal",
             "linkedin": "https://www.linkedin.com/in/ibtisamafzal/",
-            "image": os.path.join(os.path.dirname(__file__), 'assets', 'member03.jpg')
+            "image": os.path.join(os.path.dirname(__file__), 'assets', 'member03.JPG')
         }
     ]
 
