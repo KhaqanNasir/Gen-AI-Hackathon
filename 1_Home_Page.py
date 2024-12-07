@@ -52,10 +52,10 @@ def main():
     st.markdown("<h1 style='text-align: center;'>🚀 Explore Our Chatbots</h1>", unsafe_allow_html=True)
     st.markdown("""
       <div style='text-align:center;'>
-         <a href="/CV_Analysis">Page 01</a>
-         <a href="/Real_Time_Text-to-Voice">Page 02</a>
-         <a href="/Profile_Pic_Generator">Page 03</a>
-         <a href="/About_Us">👤 About Us</a>
+         <a href="/Home_Page">Home Page</a>
+         <a href="/page02">Page 02</a>
+         <a href="/page03">Page 03</a>
+         <a href="/About_Us">About Us</a>
       </div>
     """, unsafe_allow_html=True)
   
