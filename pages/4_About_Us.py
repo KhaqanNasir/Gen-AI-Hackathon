@@ -12,6 +12,10 @@ def load_css():
     }
     </style>
     """, unsafe_allow_html=True)
+    
+    st.markdown("""
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    """, unsafe_allow_html=True)
 
 # Encode images in base64 format for embedding
 def encode_image(image_path):
@@ -53,48 +57,29 @@ def main():
         }
     ]
 
-    # cols = st.columns(len(team_members))
-    # for col, member in zip(cols, team_members):
-    #      with col:
-    #         # Encode image to base64
-    #         encoded_image = encode_image(member['image'])
-        
-    #         # HTML structure with background color and adjusted image height
-    #         st.markdown(f"""
-    #         <div style='background-color: #f8f9fa; border-radius: 10px; padding: 20px; margin-bottom: 20px; text-align: center;'>
-    #             <div style='background-color: #ffffff; border-radius: 50%; width: 200px; height: 200px; margin: 0 auto; display: flex; justify-content: center; align-items: center;'>
-    #                 <img src="data:image/jpeg;base64,{encoded_image}" alt="{member['name']}" style='width: 100%; height: 100%; object-fit: cover; border-radius: 50%;'>
-    #             </div>
-    #             <div style='font-size: 22px; font-weight: 600; color: #5F6366; margin-top: 10px;'>{member['name']}</div>
-    #             <div style='font-size: 18px; color: #5F6366; margin-top: 5px;'>
-    #                 <a href='https://github.com/{member["github"]}' target='_blank'>
-    #                     [![GitHub](https://img.shields.io/badge/GitHub-000?style=flat-square&logo=github&logoColor=white)]
-    #                 </a>
-    #                 <a href='https://linkedin.com/in/{member["linkedin"]}' target='_blank'>
-    #                     [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)]
-    #                 </a>
-    #             </div>
-    #         </div>
-    #         """, unsafe_allow_html=True)
-
     cols = st.columns(len(team_members))
     for col, member in zip(cols, team_members):
-        with col:
+         with col:
+            # Encode image to base64
             encoded_image = encode_image(member['image'])
         
-            # Display image with increased width and height
-            st.image(f"data:image/jpeg;base64,{encoded_image}", width=150, caption=member['name'])
-
-            # Use badges for GitHub and LinkedIn links
+            # HTML structure with background color and adjusted image height
             st.markdown(f"""
-                <a href='https://github.com/{member["github"]}' target='_blank'>
-                    ![GitHub](https://img.shields.io/badge/GitHub-000?style=flat-square&logo=github&logoColor=white)
-                </a>
-                <a href='https://linkedin.com/in/{member["linkedin"]}' target='_blank'>
-                    ![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)
-                </a>
-             """, unsafe_allow_html=True)
-
+            <div style='background-color: #f8f9fa; border-radius: 10px; padding: 20px; margin-bottom: 20px; text-align: center;'>
+                <div style='background-color: #ffffff; border-radius: 50%; width: 200px; height: 200px; margin: 0 auto; display: flex; justify-content: center; align-items: center;'>
+                    <img src="data:image/jpeg;base64,{encoded_image}" alt="{member['name']}" style='width: 100%; height: 100%; object-fit: cover; border-radius: 50%;'>
+                </div>
+                <div style='font-size: 22px; font-weight: 600; color: #5F6366; margin-top: 10px;'>{member['name']}</div>
+                <div style='font-size: 18px; color: #5F6366; margin-top: 5px;'>
+                    <a href='https://github.com/{member["github"]}' target='_blank' style='font-size: 20px; color: #000000; margin-right: 10px;'>
+                        <i class="fab fa-github" style="font-size: 20px; color: #000000; margin-right: 5px;"></i> GitHub
+                    </a>
+                    <a href='https://linkedin.com/in/{member["linkedin"]}' target='_blank' style='font-size: 20px; color: #0077B5;'>
+                        <i class="fab fa-linkedin" style="font-size: 20px; color: #0077B5; margin-right: 5px;"></i> LinkedIn
+                    </a>
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
 
     # Footer
     st.markdown("---")
