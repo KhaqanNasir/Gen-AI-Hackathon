@@ -44,8 +44,8 @@ def main():
     ]
 
     for feature in features:
-    st.subheader(feature['title'])
-    st.write(feature['description'])
+     st.subheader(feature['title'])
+     st.write(feature['description'])
   
 
     # Navigation Buttons
