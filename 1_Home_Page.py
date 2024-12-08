@@ -2,7 +2,7 @@ import streamlit as st
 
 # Set page configuration (must be the first Streamlit command)
 st.set_page_config(
-    page_title="Testing | Home Page",
+    page_title="AI DRIVEN DAILY NEWS GENERATOR",
     page_icon="🏠",
     layout="wide",
     initial_sidebar_state="collapsed"
@@ -20,10 +20,15 @@ def main():
     </style>
     """, unsafe_allow_html=True)
 
-    # Title and Logo
-    st.title("Testing")
-    st.subheader("Testing")
-    st.header("Features")    
+    # Title and Logo Section
+    col1, col2 = st.columns([1, 1])  # Adjust the ratio if needed
+    with col1:
+        st.markdown("<h1 style='font-size: 40px;'>AI DRIVEN DAILY NEWS CONTENT GENERATOR</h1>", unsafe_allow_html=True)
+    with col2:
+        st.image("logo.png", width=200)
+
+    # Features Section
+    st.header("Features")
     features = [
         {
             "title": "Feature 01",
@@ -44,9 +49,8 @@ def main():
     ]
 
     for feature in features:
-     st.subheader(feature['title'])
-     st.write(feature['description'])
-  
+        st.subheader(feature['title'])
+        st.write(feature['description'])
 
     # Navigation Buttons
     st.markdown("<h1 style='text-align: center;'>🚀 Explore Our Chatbots</h1>", unsafe_allow_html=True)
@@ -58,12 +62,13 @@ def main():
          <a href="/About_Us">About Us</a>
       </div>
     """, unsafe_allow_html=True)
-  
+
     # Footer
     st.markdown("---")
     st.markdown(
-      '<p style="text-align: center; font-weight: 600; font-size: 16px;">💻 Developed with ❤️ using Streamlit | © 2024</p>',
-       unsafe_allow_html=True)
+        '<p style="text-align: center; font-weight: 600; font-size: 16px;">💻 Developed with ❤️ using Streamlit | © 2024</p>',
+        unsafe_allow_html=True
+    )
 
     st.sidebar.success("Select a page above.")
 
