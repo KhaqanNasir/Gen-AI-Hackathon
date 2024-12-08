@@ -1,5 +1,3 @@
 # add the requirements in this file
 pillow
 streamlit
-folium
-streamlit-folium
