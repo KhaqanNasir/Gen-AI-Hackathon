@@ -88,11 +88,11 @@ def main():
         top: 0;
         width: 100%;
         z-index: 1000;
-        border-radius: 10px;
+        border-radius: 20px;
     }
 
     .navbar a {
-        color: white;
+        color: black;
         padding: 12px 20px;
         text-decoration: none;
         font-size: 18px;
@@ -103,14 +103,14 @@ def main():
 
     .navbar a:hover {
         background-color: #cccccc;  
-        color: white;
-        border-radius: 10px;
+        color: black;
+        border-radius: 20px;
     }
 
     .navbar a.active {
         background-color: #cccccc;  
-        color: white;
-        border-radius: 10px;
+        color: black;
+        border-radius: 20px;
     }
 
     /* Hiding navbar on small screens */
