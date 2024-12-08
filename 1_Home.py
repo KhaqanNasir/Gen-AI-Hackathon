@@ -102,13 +102,13 @@ def main():
     }
 
     .navbar a:hover {
-        background-color: ##CF3742;  
+        background-color: #CF3742;  
         color: #808080;
         border-radius: 50px;
     }
 
     .navbar a.active {
-        background-color: ##CF3742;  
+        background-color: #CF3742;  
         color: #808080;
         border-radius: 50px;
     }
