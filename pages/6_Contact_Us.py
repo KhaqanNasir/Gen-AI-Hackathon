@@ -1,6 +1,4 @@
 import streamlit as st
-import folium
-from streamlit_folium import folium_static
 
 # Set page configuration
 st.set_page_config(
@@ -50,11 +48,6 @@ def main():
     # Contact Information Section
     st.markdown("<h2 style='font-size: 30px;'>📍 Our Location</h2>", unsafe_allow_html=True)
     st.write("Find us at our office location:")
-
-    # # Using Folium to display a map (adjust coordinates for the specified location)
-    # location_map = folium.Map(location=[30.8124, 73.4655], zoom_start=14)  # M.A Jinnah Road, Okara, Pakistan coordinates
-    # folium.Marker([30.8124, 73.4655], popup="AI News Generator, M.A Jinnah Road, Okara, Pakistan").add_to(location_map)
-    # folium_static(location_map)
 
     st.markdown("""
      <div style='width: 100%; height: 100%;'>
