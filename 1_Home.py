@@ -92,7 +92,7 @@ def main():
     }
 
     .navbar a {
-        color: #white;
+        color: white;
         padding: 12px 20px;
         text-decoration: none;
         font-size: 18px;
@@ -103,13 +103,13 @@ def main():
 
     .navbar a:hover {
         background-color: #cccccc;  
-        color: #white;
+        color: white;
         border-radius: 10px;
     }
 
     .navbar a.active {
         background-color: #cccccc;  
-        color: #white;
+        color: white;
         border-radius: 10px;
     }
 
@@ -119,10 +119,8 @@ def main():
             display: none;
         }
     }
-
-    /* Content Adjustments */
     .content {
-        margin-top: 80px;
+        margin-top: 50px;
     }
     </style>
     """, unsafe_allow_html=True)
