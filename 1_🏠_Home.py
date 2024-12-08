@@ -8,6 +8,16 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
+# Add Open Graph meta tags for better social sharing
+st.markdown("""
+    <head>
+        <meta property="og:title" content="Home | AI News Generator" />
+        <meta property="og:description" content="Empowering you to stay ahead with AI-curated, real-time news from around the globe. Experience the future of content generation, tailored just for you!" />
+        <meta property="og:image" content="logo.png" />
+        <meta property="og:type" content="website" />
+    </head>
+""", unsafe_allow_html=True)
+
 # Main Page Layout
 def main():
     # Global CSS to apply the Poppins font
@@ -36,7 +46,6 @@ def main():
            </ul>""",unsafe_allow_html=True)
     with col2:
         st.image("logo.png", width=600)
-
 
     # Footer
     st.markdown("---")
