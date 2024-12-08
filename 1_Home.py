@@ -78,7 +78,7 @@ def main():
 
     /* Navbar Styling */
     .navbar {
-        background-color: #0077b5;  /* Blue background */
+        background-color: #f1f1f1;
         color: white;
         display: flex;
         justify-content: space-between;
@@ -88,6 +88,7 @@ def main():
         top: 0;
         width: 100%;
         z-index: 1000;
+        border-radius: 50px;
     }
 
     .navbar a {
