@@ -1,4 +1,5 @@
 import streamlit as st
+import os  # Missing import added
 
 # Set page configuration
 st.set_page_config(
@@ -18,6 +19,11 @@ def main():
         font-family: 'Poppins', sans-serif;
     }
     </style>
+    """, unsafe_allow_html=True)
+
+    # Add Font Awesome CDN for icons
+    st.markdown("""
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     """, unsafe_allow_html=True)
 
     # Title Section
@@ -42,13 +48,12 @@ def main():
     **AI News Generator** is here to serve your needs with **accuracy, diversity, and creativity**.
     """)
 
-  
     # Team Section
     st.header("Meet the Team")
     team_members = [
         {
             "name": "Muhammad Khaqan Nasir",
-            "github": "=KhaqanNasir",
+            "github": "KhaqanNasir",
             "linkedin": "khaqan-nasir",
             "image": os.path.join(os.path.dirname(__file__), 'assets', 'member01.jpg')
         },
@@ -68,7 +73,7 @@ def main():
 
     cols = st.columns(len(team_members))
     for col, member in zip(cols, team_members):
-         with col:
+        with col:
             # Encode image to base64
             encoded_image = encode_image(member['image'])
         
@@ -86,9 +91,9 @@ def main():
                     <a href='https://linkedin.com/in/{member["linkedin"]}' target='_blank' style='font-size: 20px; color: #0077B5;'>
                         <i class="fab fa-linkedin" style="font-size: 20px; color: #0077B5; margin-right: 5px;"></i> LinkedIn
                     </a>
-                    </div>
                 </div>
-                """, unsafe_allow_html=True)
+            </div>
+            """, unsafe_allow_html=True)
 
     # Section 4: Technology Stack
     st.markdown("---")
@@ -119,6 +124,12 @@ def main():
         unsafe_allow_html=True
     )
     st.sidebar.success("Select a page above.")
+
+# Function to encode image to base64
+def encode_image(image_path):
+    with open(image_path, "rb") as image_file:
+        import base64
+        return base64.b64encode(image_file.read()).decode("utf-8")
 
 # Run the app
 if __name__ == "__main__":
