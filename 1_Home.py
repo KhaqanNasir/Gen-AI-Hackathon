@@ -63,7 +63,7 @@ st.set_page_config(
 
 # Main Page Layout
 def main():
-    # Custom CSS for horizontal navigation bar with responsiveness
+    # Custom CSS for horizontal navigation bar
     st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
@@ -112,45 +112,10 @@ def main():
         border-radius: 5px;
     }
 
-    /* Navbar for smaller screens (Mobile responsiveness) */
+    /* Hiding navbar on small screens */
     @media (max-width: 768px) {
         .navbar {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .navbar a {
-            width: 100%;
-            text-align: left;
-            padding: 12px;
-        }
-    }
-
-    /* Hamburger Menu */
-    .hamburger {
-        display: none;
-        cursor: pointer;
-        font-size: 30px;
-        color: white;
-    }
-
-    .navbar-links {
-        display: flex;
-    }
-
-    @media (max-width: 768px) {
-        .hamburger {
-            display: block;
-        }
-
-        .navbar-links {
             display: none;
-            flex-direction: column;
-            width: 100%;
-        }
-
-        .navbar-links.active {
-            display: flex;
         }
     }
 
@@ -172,16 +137,18 @@ def main():
             <a href="5_privacy.py">Privacy</a>
             <a href="6_cookie.py">Cookie Policy</a>
         </div>
-        <span class="hamburger" onclick="toggleNavbar()">&#9776;</span>
     </div>
     """, unsafe_allow_html=True)
 
-    # JavaScript for Hamburger Menu Toggle
+    # JavaScript to hide the navbar on small screens (no hamburger menu)
     st.markdown("""
     <script>
-    function toggleNavbar() {
-        var navbarLinks = document.querySelector('.navbar-links');
-        navbarLinks.classList.toggle('active');
+    // Function to hide the navbar for small screens
+    window.onload = function() {
+        var navbar = document.querySelector('.navbar');
+        if(window.innerWidth < 768) {
+            navbar.style.display = "none"; // Hide the navbar on small screens
+        }
     }
     </script>
     """, unsafe_allow_html=True)
@@ -211,4 +178,3 @@ def main():
 # Run App
 if __name__ == "__main__":
     main()
-
