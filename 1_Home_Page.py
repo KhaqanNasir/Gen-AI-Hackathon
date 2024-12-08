@@ -25,7 +25,7 @@ def main():
     with col1:
         st.markdown("<h1 style='font-size: 60px;'>AI DRIVEN DAILY NEWS CONTENT GENERATOR</h1>", unsafe_allow_html=True)
     with col2:
-        st.image("logo.png", width=400)
+        st.image("logo.png", width=600)
 
     # Features Section
     st.header("Features")
