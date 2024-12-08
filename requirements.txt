@@ -1,5 +1,5 @@
 # add the requirements in this file
 pillow
-streamlit==1.21.0
-folium==0.14.0
-streamlit-folium==0.10.0
+streamlit
+folium
+streamlit-folium
