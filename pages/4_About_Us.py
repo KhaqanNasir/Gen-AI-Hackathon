@@ -31,7 +31,6 @@ def main():
     st.markdown("<p style='font-size: 20px; text-align: center; color: gray;'>Learn more about the vision, mission, and team behind the AI News Generator. 🌍📰</p>", unsafe_allow_html=True)
 
     # Section 1: Our Vision
-    st.markdown("---")
     st.markdown("<h2 style='font-size: 30px;'>🌟 Our Vision</h2>", unsafe_allow_html=True)
     st.write("""
     At **AI News Generator**, we aim to revolutionize the way news is created and consumed. 
