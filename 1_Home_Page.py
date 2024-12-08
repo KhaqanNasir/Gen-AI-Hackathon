@@ -67,7 +67,7 @@ def main():
     st.markdown("""
       <div style='text-align:center;'>
          <a href="/Home_Page">Home Page</a>
-         <a href="/page02">Page 02</a>
+         <a href="/Privacy_Policy">Page 02</a>
          <a href="/page03">Page 03</a>
          <a href="/About_Us">About Us</a>
       </div>
