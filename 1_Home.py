@@ -127,11 +127,11 @@ def main():
     <div class="navbar">
         <div class="navbar-links">
             <a href="1_Home.py" class="active">Home</a>
-            <a href="2_about.py">About</a>
-            <a href="3_contact.py">Contact</a>
-            <a href="4_faqs.py">FAQs</a>
-            <a href="5_privacy.py">Privacy</a>
-            <a href="6_cookie.py">Cookie Policy</a>
+            <a href="2_About_Us.py">About us</a>
+            <a href="3_Privacy_Policy.py">Privacy Policy</a>
+            <a href="4_Cookie_Policy.p">Cookie_Policy.p</a>
+            <a href="5_FAQs.py">FAQs</a>
+            <a href="6_Contact_Us.py">Contact us</a>
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -151,7 +151,6 @@ def main():
       
     # Title and Logo Section
     col1, col2 = st.columns([1, 1])  # Adjust the ratio if needed
-    st.markdown("<br><br><br>", unsafe_allow_html=True)
     with col1:
         st.markdown("<h1 style='font-size: 60px; margin-top: 20px;'>AI DRIVEN DAILY NEWS CONTENT GENERATOR</h1>", unsafe_allow_html=True)
         st.markdown("<p style='font-size: 20px; color: gray;'>Empowering you to stay ahead with AI-curated, real-time news from around the globe. Experience the future of content generation, tailored just for you!</p>", unsafe_allow_html=True)
