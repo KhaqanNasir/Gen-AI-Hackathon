@@ -102,15 +102,15 @@ def main():
     }
 
     .navbar a:hover {
-        background-color: #005f87;  /* Darker blue on hover */
-        color: white;
-        border-radius: 5px;
+        background-color: ##CF3742;  
+        color: #808080;
+        border-radius: 50px;
     }
 
     .navbar a.active {
-        background-color: #004e72;
-        color: white;
-        border-radius: 5px;
+        background-color: ##CF3742;  
+        color: #808080;
+        border-radius: 50px;
     }
 
     /* Hiding navbar on small screens */
