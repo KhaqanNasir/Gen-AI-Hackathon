@@ -2,7 +2,7 @@ import streamlit as st
 
 # Set page configuration (must be the first Streamlit command)
 st.set_page_config(
-    page_title="AI DRIVEN DAILY NEWS GENERATOR",
+    page_title="Home | AI News Generator",
     page_icon="🏠",
     layout="wide",
     initial_sidebar_state="collapsed"
@@ -37,41 +37,6 @@ def main():
     with col2:
         st.image("logo.png", width=600)
 
-    # Features Section
-    st.header("Features")
-    features = [
-        {
-            "title": "Feature 01",
-            "description": "Description ...."
-        },
-        {
-            "title": "Feature 02",
-            "description": "Description ...."
-        },
-        {
-            "title": "Feature 03",
-            "description": "Description ...."
-        },
-        {
-            "title": "About Us",
-            "description": "Discover the vision, team, and journey behind this app. Join us on our mission to innovate education! 🌟"
-        }
-    ]
-
-    for feature in features:
-        st.subheader(feature['title'])
-        st.write(feature['description'])
-
-    # Navigation Buttons
-    st.markdown("<h1 style='text-align: center;'>🚀 Explore Our Chatbots</h1>", unsafe_allow_html=True)
-    st.markdown("""
-      <div style='text-align:center;'>
-         <a href="/Home_Page">Home Page</a>
-         <a href="/Privacy_Policy">PPrivacy_Policy</a>
-         <a href="/Cookie_Policy">Page 03</a>
-         <a href="/About_Us">About Us</a>
-      </div>
-    """, unsafe_allow_html=True)
 
     # Footer
     st.markdown("---")
