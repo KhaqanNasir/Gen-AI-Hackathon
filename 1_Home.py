@@ -92,7 +92,7 @@ def main():
     }
 
     .navbar a {
-        color: white;
+        color: #808080;
         padding: 12px 20px;
         text-decoration: none;
         font-size: 18px;
