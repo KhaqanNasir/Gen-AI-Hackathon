@@ -23,7 +23,9 @@ def main():
     # Title and Logo Section
     col1, col2 = st.columns([1, 1])  # Adjust the ratio if needed
     with col1:
-        st.markdown("<h1 style='font-size: 80px;'>AI DRIVEN DAILY NEWS CONTENT GENERATOR 📰🌍📡</h1>", unsafe_allow_html=True)
+        st.markdown("<h1 style='font-size: 60px; margin-top: 10px;'>AI DRIVEN DAILY NEWS CONTENT GENERATOR</h1>", unsafe_allow_html=True)
+        st.markdown("<p style='font-size: 20px; color: gray;'>Empowering you to stay ahead with AI-curated, real-time news from around the globe. 📰🌍📡 Experience the future of content generation, tailored just for you!</p>",
+        unsafe_allow_html=True)
     with col2:
         st.image("logo.png", width=600)
 
