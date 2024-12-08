@@ -1,39 +1,48 @@
 import streamlit as st
-import os
-import base64
 
-# Load Poppins font globally
-def load_css():
+# Set page configuration
+st.set_page_config(
+    page_title="About Us | AI News Generator",
+    page_icon="🌟",
+    layout="wide",
+    initial_sidebar_state="collapsed"
+)
+
+# Main Function
+def main():
+    # Apply Poppins font across the app
     st.markdown("""
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-    html, body, [class*="css"] {
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+    html, body, [class*="css"], * {
         font-family: 'Poppins', sans-serif;
     }
     </style>
     """, unsafe_allow_html=True)
-    
-    st.markdown("""
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    """, unsafe_allow_html=True)
 
-# Encode images in base64 format for embedding
-def encode_image(image_path):
-    with open(image_path, "rb") as image_file:
-        encoded_image = base64.b64encode(image_file.read()).decode("utf-8")
-    return encoded_image
+    # Title Section
+    st.markdown("<h1 style='font-size: 60px; text-align: center;'>About Us</h1>", unsafe_allow_html=True)
+    st.markdown("<p style='font-size: 20px; text-align: center; color: gray;'>Learn more about the vision, mission, and team behind the AI News Generator. 🌍📰</p>", unsafe_allow_html=True)
 
-# Main function
-def main():
-    load_css()
-
-    # Page Title
-    st.title("About Us")
+    # Section 1: Our Vision
+    st.markdown("---")
+    st.markdown("<h2 style='font-size: 30px;'>🌟 Our Vision</h2>", unsafe_allow_html=True)
     st.write("""
-    Welcome to the **About Us** page! We are a passionate team dedicated to building innovative tools that help students achieve their academic goals. 
-    Thank you for using our platform—we hope it enhances your learning journey! 🚀
+    At **AI News Generator**, we aim to revolutionize the way news is created and consumed. 
+    By leveraging cutting-edge **Generative AI**, we aspire to provide **reliable, real-time, and personalized news content** that empowers individuals and organizations worldwide. 
+    We envision a world where technology enhances the accessibility and quality of information for everyone.
     """)
 
+    # Section 2: Our Mission
+    st.markdown("---")
+    st.markdown("<h2 style='font-size: 30px;'>🚀 Our Mission</h2>", unsafe_allow_html=True)
+    st.write("""
+    Our mission is simple: to deliver **AI-powered solutions** that make news creation faster, smarter, and more efficient. 
+    We believe in innovation, creativity, and the potential of AI to transform industries. Whether you're a journalist, an organization, or just someone seeking personalized content, 
+    **AI News Generator** is here to serve your needs with **accuracy, diversity, and creativity**.
+    """)
+
+  
     # Team Section
     st.header("Meet the Team")
     team_members = [
@@ -81,20 +90,36 @@ def main():
                 </div>
                 """, unsafe_allow_html=True)
 
+    # Section 4: Technology Stack
+    st.markdown("---")
+    st.markdown("<h2 style='font-size: 30px;'>🛠️ Technology Stack</h2>", unsafe_allow_html=True)
+    st.write("""
+    Our app uses cutting-edge **Generative AI models** combined with open-source tools to ensure high-quality performance. 
+    Below are some key technologies that power **AI News Generator**:
+    - **Streamlit**: For building the user interface.
+    - **Natural Language Processing (NLP)**: For generating accurate and readable news content.
+    - **Free APIs and Open-Source Models**: To make the app cost-efficient and widely accessible.
+    - **Python Libraries**: For seamless backend integration and feature enhancement.
+    """)
+
+    # Section 5: Why Choose Us?
+    st.markdown("---")
+    st.markdown("<h2 style='font-size: 30px;'>💡 Why Choose Us?</h2>", unsafe_allow_html=True)
+    st.write("""
+    - **Free and Accessible**: We use free resources to ensure accessibility for all users.
+    - **Real-Time News**: Generate fresh, personalized news in seconds.
+    - **Innovative AI**: Powered by state-of-the-art generative AI.
+    - **User-Centric Design**: Intuitive and simple to use for anyone.
+    """)
+
     # Footer
     st.markdown("---")
-    st.markdown("""
-        <div style="text-align: center; font-weight: 600; font-size: 16px;">
-            💻 Developed with ❤️ using Streamlit | © 2024
-        </div>
-    """, unsafe_allow_html=True)
-    
-# Run the application
-if __name__ == "__main__":
-    st.set_page_config(
-        page_title="About Us | Testing",
-        page_icon="🎓",
-        layout="wide",
-        initial_sidebar_state="collapsed"
+    st.markdown(
+        '<p style="text-align: center; font-weight: 600; font-size: 16px;">💻 Developed with ❤️ using Streamlit | © 2024</p>',
+        unsafe_allow_html=True
     )
+    st.sidebar.success("Select a page above.")
+
+# Run the app
+if __name__ == "__main__":
     main()
