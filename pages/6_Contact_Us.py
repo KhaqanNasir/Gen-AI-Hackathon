@@ -51,10 +51,16 @@ def main():
     st.markdown("<h2 style='font-size: 30px;'>📍 Our Location</h2>", unsafe_allow_html=True)
     st.write("Find us at our office location:")
 
-    # Using Folium to display a map (adjust coordinates for the specified location)
-    location_map = folium.Map(location=[30.8124, 73.4655], zoom_start=14)  # M.A Jinnah Road, Okara, Pakistan coordinates
-    folium.Marker([30.8124, 73.4655], popup="AI News Generator, M.A Jinnah Road, Okara, Pakistan").add_to(location_map)
-    folium_static(location_map)
+    # # Using Folium to display a map (adjust coordinates for the specified location)
+    # location_map = folium.Map(location=[30.8124, 73.4655], zoom_start=14)  # M.A Jinnah Road, Okara, Pakistan coordinates
+    # folium.Marker([30.8124, 73.4655], popup="AI News Generator, M.A Jinnah Road, Okara, Pakistan").add_to(location_map)
+    # folium_static(location_map)
+
+     st.markdown("""
+    <div style='width: 100%; height: 100%;'>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3426.9461831002777!2d73.43206937626101!3d30.80414347455002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3922a73c3c264d03%3A0x1654eeba796b65a3!2sMohammad%20Ali%20Jinnah%20Rd%2C%20Okara%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1733648554209!5m2!1sen!2s" 
+        width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>""", unsafe_allow_html=True)
 
     # Social Media Section
     st.markdown("<h2 style='font-size: 30px;'>💬 Follow Us</h2>", unsafe_allow_html=True)
