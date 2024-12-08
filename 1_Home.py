@@ -119,9 +119,6 @@ def main():
             display: none;
         }
     }
-    .content {
-        margin-top: 50px;
-    }
     </style>
     """, unsafe_allow_html=True)
 
