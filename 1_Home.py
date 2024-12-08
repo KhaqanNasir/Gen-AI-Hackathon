@@ -126,10 +126,10 @@ def main():
     st.markdown("""
     <div class="navbar">
         <div class="navbar-links">
-            <a href="1_Home.py" class="active">Home</a>
-            <a href="2_About_Us.py">About us</a>
+            <a href="#" class="active">Home</a>
+            <a href="pages/2_About_Us.py">About us</a>
             <a href="3_Privacy_Policy.py">Privacy Policy</a>
-            <a href="4_Cookie_Policy.p">Cookie_Policy.p</a>
+            <a href="4_Cookie_Policy.p">Cookie Policy</a>
             <a href="5_FAQs.py">FAQs</a>
             <a href="6_Contact_Us.py">Contact us</a>
         </div>
